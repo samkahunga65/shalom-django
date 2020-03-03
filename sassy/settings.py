@@ -24,8 +24,9 @@ SECRET_KEY = 'qe42z!b(^4e4zzkdciv6*)d!2-5_%c4fu1%a3)6iy&yax8(txf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['0.0.0.0',
+'localhost',
+ 'whispering-hollows-47791.herokuapp.com/']
 
 # Application definition
 
@@ -137,3 +138,4 @@ MEDIA_URL = '/media/'
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_libsass.SassCompiler'),
 )
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
