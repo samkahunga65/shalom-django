@@ -1,6 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Ubuntu&display=swap");
+:root {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px; }
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0; }
+
+body {
+  background-color: #F1E7FC; }
+
+.navbar.specific {
+  height: 3rem; }
+  .navbar.specific .logo img {
+    margin-left: 1rem;
+    margin-top: 3px;
+    height: 2.8rem;
+    width: 4rem; }
+  .navbar.specific .nav_elements button {
+    height: 1.5rem;
+    width: 4rem;
+    background-color: #D5B7F6;
+    color: #f0b17d;
+    font-weight: bold; }
+
+.top {
+  background-color: #230F32;
+  color: white;
+  font-size: .5rem;
+  text-align: center;
+  height: 1rem; }
+  .top p {
+    margin: auto;
+    padding-top: 5px; }
+
+.jumbotron {
+  overflow: auto;
+  height: 50%vh;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .jumbotron .content {
+    margin-top: 4rem;
+    color: white; }
+    .jumbotron .content h1 {
+      text-align: center; }
+    .jumbotron .content h6 {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 1rem; }
+    .jumbotron .content button {
+      width: 20%;
+      height: 1.5rem;
+      margin: 2rem 40%;
+      border: 0px;
+      border-radius: 4px;
+      background-color: #964BEB; }
+    .jumbotron .content button a {
+      text-align: center;
+      margin: auto;
+      text-decoration: none;
+      font-size: 0.8rem;
+      text-transform: lowercase;
+      color: white;
+      font-weight: 200; }
 
 /*# sourceMappingURL=index.css.map */

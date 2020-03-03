@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Ubuntu&display=swap");
+:root {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #F1E7FC; }
+
+.top {
+  background-color: #230F32;
+  color: white;
+  font-size: .7rem;
+  text-align: center;
+  height: 1rem; }
+
+.jumbotron {
+  height: 8rem; }
+
+/*# sourceMappingURL=index.css.map */

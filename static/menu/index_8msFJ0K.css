@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Ubuntu&display=swap");
+:root {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #F1E7FC; }
+
+.top {
+  background-color: #230F32;
+  color: white;
+  font-size: .7rem;
+  text-align: center;
+  height: 1rem; }
+
+.jumbotron {
+  overflow: auto;
+  height: 30rem;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .jumbotron .content {
+    margin-top: 5rem;
+    color: white; }
+    .jumbotron .content h1 {
+      text-align: center; }
+    .jumbotron .content h6 {
+      text-align: center;
+      margin-top: 1rem; }
+    .jumbotron .content button {
+      width: 10%;
+      margin: 2rem 45%; }
+    .jumbotron .content button a {
+      text-decoration: none; }
+
+/*# sourceMappingURL=index.css.map */

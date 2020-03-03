@@ -1,0 +1,21 @@
+@import 'config';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $glitta;
+}
+.top {
+    background-color: $mid-red-purp;
+    color: white;
+    font-size: .7rem;
+    text-align: center;
+    height: 1rem;
+}
+.jumbotron {
+    height: 8rem;
+    
+}

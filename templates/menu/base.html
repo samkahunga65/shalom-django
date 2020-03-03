@@ -15,10 +15,15 @@
       }
       body {
         box-sizing: border-box;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
       }
       .navbar {
         position: sticky;
         overflow: hidden;
+        background-color: #F1E7FC;
         margin-top: 0px;
         padding-top: 0px;
         height: 4rem;
@@ -36,9 +41,17 @@
         margin: 0px 8px;
       }
       .nav_elements button {
+        margin-top: 1rem;
         height: 2rem;
         width: 3.5rem;
+        border: 0px ;
+        background-color: #F1E7FC;
+        border-radius: 4px;
+      }
 
+      .nav_elements button:hover {
+        background-color: rgb(108, 72, 138);
+        color: white;
       }
       .nav_elements li:last-child {
         margin-right: 0px;
@@ -48,6 +61,11 @@
         height: 4rem;
         width: 5rem;
         object-fit: covers;
+        margin-left: 2rem;
+      }
+      footer {
+        background-color: #964BEB;
+        text-align: center;
       }
     </style>
     <title>Shalom</title>
@@ -55,7 +73,7 @@
 <body>
   {% block top_kabisa %}
   {% endblock %}
-  <div class="navbar">
+  <div class="navbar specific">
     <div class="logo">
       <img src="{% static 'menu/img/shalom_logo.png' %}" alt="">
     </div>
@@ -92,10 +110,10 @@
     </ul>
     </div>
   </div>
-  <div class="content">
+    {%block jumbo%}
+    {%endblock%}
     {%block content%}
     {%endblock%}
-  </div>
     <footer>
         <p>@2020 ShalomⒸ</p>
     </footer>
