@@ -1,0 +1,104 @@
+{% load static %}
+{% load sass_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%block css%}
+    {%endblock%}
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        font-size: 16px;
+      }
+      body {
+        box-sizing: border-box;
+      }
+      .navbar {
+        position: sticky;
+        overflow: hidden;
+        margin-top: 0px;
+        padding-top: 0px;
+        height: 4rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .nav_elements ul {
+        display: flex;
+        justify-content: space-around;
+      }
+      .nav_elements li {
+        flex: 1;
+        list-style: none;
+        margin: 0px 8px;
+      }
+      .nav_elements button {
+        height: 2rem;
+        width: 3.5rem;
+
+      }
+      .nav_elements li:last-child {
+        margin-right: 0px;
+      }
+
+      .logo img {
+        height: 4rem;
+        width: 5rem;
+        object-fit: covers;
+      }
+    </style>
+    <title>Shalom</title>
+</head>
+<body>
+  {% block top_kabisa %}
+  {% endblock %}
+  <div class="navbar">
+    <div class="logo">
+      <img src="{% static 'menu/img/shalom_logo.png' %}" alt="">
+    </div>
+    <div class="nav_elements">
+      <ul>
+        <li>
+      <form action="." method="post" class="servises">
+        <button>servises</button>
+      </form>
+      </li>
+      <li>
+      <form action="." method="post" class="booking">
+        <button>booking</button>
+      </form>
+      </li>
+      {% if user.is_authenticated %}
+      <li>
+      <form action="." method="post" class="logout">
+        <button>logout</button>
+      </form>
+      </li>
+      {% else %}
+      <li>
+      <form action="." method="post" class="login">
+        <button>login</button>
+      </form>
+      </li>
+      <li>
+      <form action="." method="post" class="signup">
+        <button>signup</button>
+      </form>
+      </li>
+      {% endif %}
+    </ul>
+    </div>
+  </div>
+  <div class="content">
+    {%block content%}
+    {%endblock%}
+  </div>
+    <footer>
+        <p>@2020 ShalomⒸ</p>
+    </footer>
+    
+</body>
+</html>

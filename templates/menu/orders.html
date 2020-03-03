@@ -1,0 +1,21 @@
+{% extends "menu/base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href=" {% static 'menu/orders.css' %} ">
+{% endblock %}
+{% block content %}
+    <div class="main">
+        {% for dish in dishs %}
+        <div class="container">
+            <img src="{{dish.image.url}}" alt="">
+            <p>{{dish.item_name}}</p>
+            <p>price : ksh{{dish.price}}</p>
+            <button> order </button>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="order">
+
+    </div>
+    {% endblock %}

@@ -1,0 +1,9 @@
+{% extends "accounts/index.html" %}
+{% block body %}
+<h1>signup</h1>
+    <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>click me</button>
+    </form>
+{% endblock %}

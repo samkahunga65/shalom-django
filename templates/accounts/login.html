@@ -1,0 +1,12 @@
+{% extends "accounts/index.html" %}
+{% block body %}
+<h1>Login</h1>
+    <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    {% if request.GET.next %}
+    <input type="hidden"name='next'value={{ request.GET.next }}>
+    {% endif %}
+    <button>click me</button>
+    </form>
+{% endblock %}

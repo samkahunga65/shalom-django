@@ -1,0 +1,58 @@
+{% extends "menu/base.html" %}
+{% load static %}
+
+{%block css%}
+<link rel="stylesheet" type="text/css" href=" {% static 'menu/order.css' %} ">
+{%endblock%}
+
+
+
+{%block content%}
+<div class="row">
+    
+    <div class="column">
+        <div class="container"><img src="{%static 'menu/img/mandazi.jpg'%}" alt="">
+            <button type="button" class="btn btn-outline-danger">order</button>
+            <p class="title">andazi</p></div>
+        <div class="container"><img src="{%static 'menu/img/beef-pilau.jpg'%}" alt="">
+            <button type="button" class="btn btn-outline-danger">order</button>
+            <p class="title">beef pilau</p></div>
+        <div class="container"><img src="{%static 'menu/img/chai.jpg'%}" alt="">
+            <button type="button" class="btn btn-outline-danger">order</button>
+            <p class="title">tea</p></div>
+    </div>
+    <div class="column">
+        <div class="container"><img src="{%static 'menu/img/coffee.jpg'%}" alt="">
+            <button type="button" class="btn btn-outline-danger">order</button>
+            <p class="title">coffee</p></div>
+        <div class="container"><img src="{%static 'menu/img/pumpkin-chapati.jpg'%}" alt="">
+            <button type="button" class="btn btn-outline-danger">order</button>
+            <p class="title">chapati</p></div>
+        <div class="container"><img src="{%static 'menu/img/ugali.jpg'%}" alt="">
+            <button type="button" class="btn btn-outline-danger">order</button>
+            <p class="title">ugali</p></div>
+    </div>
+    <div class="column">
+        <div class="container"><img src="{%static 'menu/img/matumbo.jpeg'%}" alt="">
+            <button type="button" class="btn btn-outline-danger">order</button>
+            <p class="title">matumbo</p></div>
+        <div class="container"><img src="{%static 'menu/img/matoke.jpg'%}" alt="">
+            <button type="button" class="btn btn-outline-danger">order</button>
+            <p class="title">matoke</p></div>
+        <div class="container"><img src="{%static 'menu/img/githeri.jpg'%}" alt="">
+            <button type="button" class="btn btn-outline-danger">order</button>
+            <p class="title">githeri</p></div>
+    </div>
+    <div class="column">
+        <div class="container"><img src="{%static 'menu/img/chicken.jpg'%}" alt="">
+            <button type="button" class="btn btn-outline-danger">order</button>
+            <p class="title">chicken</p></div>
+        <div class="container"><img src="{%static 'menu/img/githeri-minji.jpg'%}" alt="">
+            <button type="button" class="btn btn-outline-danger">order</button>
+            <p class="title">githeri minji</p></div>
+        <div class="container"><img src="{%static 'menu/img/mukimi=o.jpg'%}" alt="">
+            <button type="button" class="btn btn-outline-danger">order</button>
+            <p class="title">mukimo</p></div>
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,35 @@
+{% extends "menu/base.html" %}
+{% load static %}
+{% load sass_tags %}
+
+{%block css%}
+<!-- <link rel="stylesheet" type="text/css" href=" {% static 'menu/base.css' %}  "> -->
+<!-- <link rel="stylesheet" type="text/css" href="/static/menu/base.css?{% now "U" %}" /> -->
+<link href="{% sass_src 'menu/index.scss' %}" rel="stylesheet" type="text/css" />
+
+{%endblock%}
+{% block top_kabisa %}
+<div class="top" id="intro">
+    <p>TEMANI BUSINESS CENTRE.MATHIGU RD.NEXT TO COOP BANK RUIRU.0722972616</p>
+</div>
+{% endblock %}
+
+{%block jumbo%}
+<div class="jumbotron-fluid" style="background-image: url('/static/menu/img/githeri.jpg');">
+   <h1>Shalom Best Foods</h1>
+   <hr class="my-4">
+   <h6>Come Dine with us!</h6>
+   <button type="button" class="purp ">
+       <a href="order/">MENU</a>
+   </button>
+</div> 
+{%endblock%}
+
+{%block content%}
+<div class="card"style="80%vh">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae molestiae porro, eaque facere odit labore optio soluta rerum officia voluptatum qui fuga nulla quam, cumque iste. Quam, eos? Voluptatibus, similique!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae molestiae porro, eaque facere odit labore optio soluta rerum officia voluptatum qui fuga nulla quam, cumque iste. Quam, eos? Voluptatibus, similique!</p>
+</div>
+
+{%endblock%}
+
