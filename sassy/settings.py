@@ -26,7 +26,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0',
 'localhost',
- 'whispering-hollows-47791.herokuapp.com/']
+ 'whispering-hollows-47791.herokuapp.com']
 
 # Application definition
 
