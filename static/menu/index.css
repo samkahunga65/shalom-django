@@ -11,21 +11,8 @@
 body {
   background-color: #F1E7FC; }
 
-.navbar.specific {
-  height: 3rem; }
-  .navbar.specific .logo img {
-    margin-left: 1rem;
-    margin-top: 3px;
-    height: 2.8rem;
-    width: 4rem; }
-  .navbar.specific .nav_elements button {
-    height: 1.5rem;
-    width: 4rem;
-    background-color: #D5B7F6;
-    color: #f0b17d;
-    font-weight: bold; }
-
 .top {
+  display: none;
   background-color: #230F32;
   color: white;
   font-size: .5rem;
@@ -37,11 +24,14 @@ body {
 
 .jumbotron {
   overflow: auto;
-  height: 50%vh;
+  height: 50vh;
   background-repeat: no-repeat;
   background-size: cover; }
   .jumbotron .content {
+    display: block;
+    margin: auto;
     margin-top: 4rem;
+    width: 80%;
     color: white; }
     .jumbotron .content h1 {
       text-align: center; }
@@ -64,5 +54,35 @@ body {
       text-transform: lowercase;
       color: white;
       font-weight: 200; }
+
+.content-main {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; }
+  .content-main .card {
+    height: 12rem;
+    width: 60%;
+    margin: 1rem auto;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid black;
+    border-radius: 1rem; }
+    .content-main .card img {
+      display: block;
+      height: 4rem;
+      width: 4rem;
+      margin-left: auto;
+      margin-right: auto; }
+    .content-main .card h1 {
+      display: block;
+      bottom: 0px;
+      font-size: .9rem;
+      text-align: center;
+      text-decoration: underline; }
+    .content-main .card p {
+      font-size: .8rem;
+      text-align: center; }
+  .content-main .card:first-child {
+    margin-top: 2rem; }
 
 /*# sourceMappingURL=index.css.map */

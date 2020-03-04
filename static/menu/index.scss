@@ -8,26 +8,9 @@
 body {
     background-color: $glitta;
 }
-.navbar.specific {
-    // display: none;
-    height: 3rem;
-    .logo img {
-        margin-left: 1rem;
-        margin-top: 3px;
-        height: 2.8rem;
-        width: 4rem;
-    }
-    .nav_elements {
-        button {
-            height: 1.5rem;
-            width: 4rem;
-            background-color: $mauve;
-            color: rgb(240, 177, 125);
-            font-weight: bold;
-        }
-    }
-}
+
 .top {
+    display: none;
     background-color: $mid-red-purp;
     color: white;
     font-size: .5rem;
@@ -41,11 +24,15 @@ body {
 }
 .jumbotron {
     overflow:auto;
-    height: 50%vh;
+    height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;
+    
      .content {
+        display: block;
+        margin: auto;
         margin-top: 4rem;
+        width: 80%;
          color: white;
          h1 {
              text-align: center;
@@ -75,4 +62,41 @@ body {
            font-weight: 200;
          }
      }
+}
+.content-main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    .card {
+        height: 12rem;
+        width: 60%;
+        margin: 1rem auto;
+        background-color: rgba(255, 255, 255, 0);
+        border: 2px solid black;
+        border-radius: 1rem;
+        img {
+            display: block;
+            height: 4rem;
+            width: 4rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {
+            display: block;
+            // margin-top: auto;
+            bottom: 0px;
+            font-size: .9rem;
+            text-align: center;
+            text-decoration: underline;
+        }
+        p {
+            font-size: .8rem;
+            text-align: center;
+        }
+    }
+    .card:first-child{
+        margin-top: 2rem;
+    }
 }
