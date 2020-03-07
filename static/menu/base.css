@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Ubuntu&display=swap");
+:root {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+
+
+.navbar.specific {
+  position: relative;
+  background-color: #D5B7F6;
+  height: 3rem; }
+  .navbar.specific .logo {
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+  .navbar.specific #logo_pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2.8rem;
+    width: 4rem; }
+  .navbar.specific .nav_elements {
+    display: none; }
+    .navbar.specific .nav_elements button {
+      height: 1.5rem;
+      width: 4rem;
+      background-color: #D5B7F6;
+      color: #f0b17d;
+      font-weight: bold; }
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+@media screen and (max-width: 768px) {
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  nav {
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: -1.5rem;
+    /* transform: translate(-5%, -50%);
+    z-index: 2; */
+  }
+
+  .nav-links {
+    position: fixed;
+    background: #D5B7F6;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -40%);
+    -webkit-clip-path: circle(100px at 90% -40%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    z-index: 1000;
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+  .landing {
+    flex-direction: column;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li a {
+    font-size: 25px;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+  
+}
+.footer-start {
+  background-color: #D5B7F6;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+.footer-start h3 {
+  margin: auto;
+}
+
+#footer-info {
+  background-color: #964BEB;
+  text-align: center;
+}

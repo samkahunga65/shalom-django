@@ -1,0 +1,19 @@
+{% extends "../menu/base.html" %}
+{% load static %}
+{% block content %}
+<h1>signup</h1>
+    <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>click me</button>
+    </form>
+    <h1>Login</h1>
+    <form method="post">
+    {% csrf_token %}
+    {{form2.as_p}}
+    {% if request.GET.next %}
+    <input type="hidden"name='next'value={{ request.GET.next }}>
+    {% endif %}
+    <button>click me</button>
+    </form>
+{% endblock %}

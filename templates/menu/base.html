@@ -6,151 +6,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'menu/base.css' %}">
     {%block css%}
     {%endblock%}
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Ubuntu&display=swap");
-  :root {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 16px; }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0; }
-
-  body {
-    background-color: #F1E7FC; }
-
-  .navbar.specific {
-    position: relative;
-    background-color: #D5B7F6;
-    height: 4.5rem; }
-    .navbar.specific .logo {
-      margin: 0;
-      padding: 0;
-      width: 100%; }
-    .navbar.specific #logo_pic {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: auto;
-      height: 2.8rem;
-      width: 4rem; }
-    .navbar.specific .nav_elements {
-      display: none; }
-      .navbar.specific .nav_elements button {
-        height: 1.5rem;
-        width: 4rem;
-        background-color: #D5B7F6;
-        color: #f0b17d;
-        font-weight: bold; }
-
-  .nav-links {
-    display: flex;
-    list-style: none;
-    width: 50%;
-    height: 100%;
-    justify-content: space-around;
-    align-items: center;
-    margin-left: auto;
-  }
-
-  .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-  }
-  .hamburger {
-      position: absolute;
-      cursor: pointer;
-      right: 5%;
-      top: 50%;
-      transform: translate(-5%, -50%);
-      z-index: 2;
-    }
-
-  @media screen and (max-width: 768px) {
-    .line {
-      width: 30px;
-      height: 3px;
-      background: white;
-      margin: 5px;
-    }
-    nav {
-      position: relative;
-    }
-
-    .hamburger {
-      position: absolute;
-      cursor: pointer;
-      right: 5%;
-      top: -1.5rem;
-      /* transform: translate(-5%, -50%);
-      z-index: 2; */
-    }
-
-    .nav-links {
-      position: fixed;
-      background: rgba(215, 183, 246, 0.87);
-      height: 100vh;
-      width: 100%;
-      flex-direction: column;
-      clip-path: circle(100px at 90% -40%);
-      -webkit-clip-path: circle(100px at 90% -40%);
-      transition: all 1s ease-out;
-      pointer-events: none;
-    }
-    .nav-links.open {
-      z-index: 1000;
-      clip-path: circle(1000px at 90% -10%);
-      -webkit-clip-path: circle(1000px at 90% -10%);
-      pointer-events: all;
-    }
-    .landing {
-      flex-direction: column;
-    }
-    .nav-links li {
-      opacity: 0;
-    }
-    .nav-links li a {
-      font-size: 25px;
-    }
-    .nav-links li:nth-child(1) {
-      transition: all 0.5s ease 0.2s;
-    }
-    .nav-links li:nth-child(2) {
-      transition: all 0.5s ease 0.4s;
-    }
-    .nav-links li:nth-child(3) {
-      transition: all 0.5s ease 0.6s;
-    }
-    li.fade {
-      opacity: 1;
-    }
-    
-  }
-  .footer-start {
-    background-color: rgb(134, 130, 138);
-    text-align: center;
-    color: rgb(0, 0, 0);
-    height: 20vh;
-  }
-  .footer-start h3 {
-    margin: auto;
-  }
-  .footer-start img{
-    height: 2rem;
-    width: 2rem;
-  }
-  .footer-end {
-    background-color: rgb(0, 0, 0);
-    text-align: center;
-    color: white;
-    font-weight: bold;
-  }
-</style>
     
 <title>Shalom</title>
 </head>
@@ -176,6 +35,7 @@
       {% if user.is_authenticated %}
       <li>
       <form action="." method="post" class="logout">
+        {% csrf_token %}
         <button>logout</button>
       </form>
       </li>
@@ -202,11 +62,15 @@
     <ul class="nav-links">
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Projects</a></li>
+      {% if user.is_authenticated %}
+      <li><a href="/a/logout">logout</a></li>
+      {% else %}
+      <!-- <li><a href="a/login">login</a></li>
+      <li><a href="a/signup">signup</a></li> -->
+      <li><a href="a/aio">aio</a></li>
+      {% endif %}
     </ul>
   </nav>
-  </div>
   
     {%block jumbo%}
     {%endblock%}
@@ -215,13 +79,9 @@
     <footer>
         <div class="footer-start">
           <h3>temani business centre.next to coop bank.mathigu rd.ruiru ndani</h3>
-          <img src="{% static 'menu/img/phone-call.svg' %}" alt="">
-          <p>call : 0722972616</p>
+          <p></p>
         </div>
-        <div class="footer-end">
-          <p>shalom best foods © 2020</p>
-        </div>
-        
+        <p id="footer-info">©shalom best foods 2020</p>
     </footer>
     
 </body>

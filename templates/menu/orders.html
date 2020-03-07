@@ -1,21 +1,24 @@
 {% extends "menu/base.html" %}
 {% load static %}
+{% load sass_tags %}
 
 {% block css %}
-<link rel="stylesheet" href=" {% static 'menu/orders.css' %} ">
+<link rel="stylesheet" href=" {% sass_src 'menu/orders.scss' %} ">
 {% endblock %}
 {% block content %}
     <div class="main">
         {% for dish in dishs %}
         <div class="container">
-            <img src="{{dish.image.url}}" alt="">
+            {% if dish.image %}
+            <div class="image">
+            <img src="{{ dish.image.url }}">
+            </div>
+            {% endif %}
             <p>{{dish.item_name}}</p>
             <p>price : ksh{{dish.price}}</p>
-            <button> order </button>
+            <a href="{% url 'menu:order_with_pk' dish.id %}">order</a>
         </div>
         {% endfor %}
     </div>
-    <div class="order">
 
-    </div>
     {% endblock %}
