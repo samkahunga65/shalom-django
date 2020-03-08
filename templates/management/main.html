@@ -1,2 +1,44 @@
 {% extends "../menu/base.html" %}
-weee!
+{% load  static %}
+{% load sass_tags %}
+
+{%block css%}
+<link href="{% sass_src 'management/main.scss' %}" rel="stylesheet" type="text/css" />
+{%endblock%}
+
+{% block content %}
+<div class="stats">
+    <div class="today">
+        <h1>today</h1>
+        <div class="users">
+            <h1>new customers : {{customers_today}}</h1>
+        </div>
+        <div class="sales">
+            <h1>total sales : {{today_cash}}</h1>
+        </div>
+    </div>
+    <div class="this_week">
+        <h1>this week</h1>
+        <div class="users">
+            <h1>new customers: {{customers_this_week}}</h1>
+        </div>
+        <div class="sales">
+            <h1>total sales : {{this_week_cash}}</h1>
+        </div>
+    </div>
+</div>
+<div class="update_menu">
+    <form  method="POST" action="{% url 'management:shalominfo' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button>upload</button>
+    </form>
+    <div>
+    {% if ran %}
+    {% for message in messages %}
+    <h1>{{message}}</h1>
+    {% endfor %}
+    {% endif %}
+    </div>
+</div>
+{%endblock%}

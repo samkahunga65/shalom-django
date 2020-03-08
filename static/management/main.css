@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Ubuntu&display=swap");
+:root {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #F1E7FC; }
+
+/*# sourceMappingURL=main.css.map */
