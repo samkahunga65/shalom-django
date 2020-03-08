@@ -8,7 +8,10 @@
   margin: 0;
   padding: 0; }
 
-
+html {
+    position: relative;
+    min-height: 100%;
+}
 
 .navbar.specific {
   position: relative;
@@ -117,6 +120,7 @@
   }
   
 }
+
 .footer-start {
   background-color: #D5B7F6;
   text-align: center;

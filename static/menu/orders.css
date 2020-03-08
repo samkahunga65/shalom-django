@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: column; }
   .main .container {
-    height: 20rem;
+    height: 22rem;
     width: 100%; }
     .main .container .image {
       margin-top: 2rem;

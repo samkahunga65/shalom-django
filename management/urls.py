@@ -6,7 +6,7 @@ from django.conf import settings
 
 app_name = 'management'
 urlpatterns = [
-    path('', views.management_login, name='login' ),
+    path('', views.shalom_info, name='shalominfo' ),
     path('menu', views.menu_modify, name='menumod' ),
 ]
 if settings.DEBUG:

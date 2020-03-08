@@ -10,6 +10,8 @@ class Dish(models.Model):
 
     def __str__(self):
         return f'{self.item_name} @ {self.price}'
+    def itemname(self):
+        return self.item_name
 
 class Sales(models.Model):
     item_name = models.CharField(max_length=120)

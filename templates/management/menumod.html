@@ -1,0 +1,14 @@
+{% extends "menu/base.html" %}
+{% load static %}
+{% block content %}
+<form  method="POST" action="{% url 'menu:menumod' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <button>upload</button>
+</form>
+<div>
+{% for message in messages %}
+<h1>{{message}}</h1>
+{% endfor %}
+</div>
+{% endblock %}

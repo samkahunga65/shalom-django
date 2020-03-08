@@ -16,7 +16,8 @@
             {% endif %}
             <p>{{dish.item_name}}</p>
             <p>price : ksh{{dish.price}}</p>
-            <a href="{% url 'menu:order_with_pk' dish.id %}">order</a>
+            <a href="{% url 'menu:mk_order' dish.id %}">order</a>
+            <!-- <a href="{% url 'menu:order_with_pk' dish.id %}">order</a> -->
         </div>
         {% endfor %}
     </div>
