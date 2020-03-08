@@ -22,20 +22,7 @@ ENV = False
 
 if os.path.isfile(DOTENV_FILE):
     ENV = True
-if ENV:
-    DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'shalom',
-        'USER': 'postgres',
-        'PASSWORD': '77AAllpphhaa1111',
-        'HOST': 'localhost',
-        'PORT': '5433',
-    }
-}
-else:
-    DATABASES = dict()
-    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -103,19 +90,20 @@ WSGI_APPLICATION = 'sassy.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'shalom',
-#         'USER': 'postgres',
-#         'PASSWORD': '77AAllpphhaa1111',
-#         'HOST': 'localhost',
-#         'PORT': '5433',
-#     }
-# }
-# DATABASES = {}
-# DATABASES['default'] = dj_database_url.config(conn_max_age=600)
-
+if ENV:
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'shalom',
+        'USER': 'postgres',
+        'PASSWORD': '77AAllpphhaa1111',
+        'HOST': 'localhost',
+        'PORT': '5433',
+    }
+}
+else:
+    DATABASES = dict()
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
@@ -170,5 +158,5 @@ COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_libsass.SassCompiler'),
 )
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-if not ENV:
-    del DATABASES['default']['OPTIONS']['sslmode']
+# if not ENV:
+#     del DATABASES['default']['OPTIONS']['sslmode']
