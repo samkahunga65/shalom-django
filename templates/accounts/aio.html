@@ -1,12 +1,20 @@
 {% extends "../menu/base.html" %}
 {% load static %}
+{% load sass_tags %}
+{% block css %}
+<link rel="stylesheet" href=" {% sass_src 'accounts/aio.scss' %} ">
+{% endblock %}
 {% block content %}
+<div class="container">
 <h1>signup</h1>
     <form method="post">
     {% csrf_token %}
     {{form.as_p}}
-    <button>click me</button>
+    <button>signup</button>
     </form>
+    <div class="middle">
+        <h1>OR</h1>
+    </div>
     <h1>Login</h1>
     <form method="post">
     {% csrf_token %}
@@ -14,6 +22,7 @@
     {% if request.GET.next %}
     <input type="hidden"name='next'value={{ request.GET.next }}>
     {% endif %}
-    <button>click me</button>
+    <button>login</button>
     </form>
+</div>
 {% endblock %}

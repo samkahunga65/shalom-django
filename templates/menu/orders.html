@@ -12,11 +12,14 @@
             {% if dish.image %}
             <div class="image">
             <img src="{{ dish.image.url }}">
+            <div class="bottom-left">{{dish.item_name}}
+            </div>
+            <div class="bottom-right">{{dish.price}}</div>
             </div>
             {% endif %}
-            <p>{{dish.item_name}}</p>
-            <p>price : ksh{{dish.price}}</p>
-            <a href="{% url 'menu:mk_order' dish.id %}">order</a>
+            <!-- <p>{{dish.item_name}}</p>
+            <p>price : ksh{{dish.price}}</p> -->
+            <a href="{% url 'menu:mk_order' dish.id %}"><button>order</button></a>
             <!-- <a href="{% url 'menu:order_with_pk' dish.id %}">order</a> -->
         </div>
         {% endfor %}

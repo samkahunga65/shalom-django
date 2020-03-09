@@ -7,18 +7,26 @@
 {%endblock%}
 
 {% block content %}
+<div class="main">
 <div class="stats">
     <div class="today">
         <h1>today</h1>
+        <div class="card">
+            <div class="container">
+            <div class="container">
         <div class="users">
             <h1>new customers : {{customers_today}}</h1>
         </div>
         <div class="sales">
             <h1>total sales : {{today_cash}}</h1>
         </div>
+        </div>
+        </div>
+        </div>
     </div>
     <div class="this_week">
         <h1>this week</h1>
+        <div class="card">
         <div class="users">
             <h1>new customers: {{customers_this_week}}</h1>
         </div>
@@ -26,8 +34,10 @@
             <h1>total sales : {{this_week_cash}}</h1>
         </div>
     </div>
+    </div>
 </div>
 <div class="update_menu">
+    <h1>Update The Menu</h1>
     <form  method="POST" action="{% url 'management:shalominfo' %}" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form }}
@@ -40,5 +50,6 @@
     {% endfor %}
     {% endif %}
     </div>
+</div>
 </div>
 {%endblock%}

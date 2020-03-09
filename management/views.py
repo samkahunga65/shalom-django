@@ -53,6 +53,7 @@ def shalom_info(request):
     all_sales = Sales.objects.all()
     #find sales & cash that day
     today_sales = Sales.objects.filter(date=today)
+    print(f"nikooooo{len(today_sales)}")
     today_sales_ttl = len(today_sales)
     today_cash = 0
     for sale in today_sales:
@@ -64,6 +65,7 @@ def shalom_info(request):
     for sale in all_sales:
         if int(sale.time_of_sale.strftime("%V")) == this_week:
             this_week_sales.append(sale)
+            print(f"nikokfufhiusfg{len(this_week_sales)}")
     for sale in this_week_sales:
         this_week_cash = this_week_cash+(sale.price * sale.how_many) 
     #get users signed in today
@@ -73,7 +75,7 @@ def shalom_info(request):
         if int(user.date_joined.strftime("%d")) == today_day:
             customers_today.append(user)
     new_customers_today = len(customers_today)
-    print(type(new_customers_today))
+    
     #get users signed in this week &total users
     customers_this_week = []
     for user in users:

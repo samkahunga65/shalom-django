@@ -8,8 +8,7 @@
   margin: 0;
   padding: 0; }
 
-html {
-    position: relative;
+html, body {
     min-height: 100%;
 }
 
@@ -133,4 +132,11 @@ html {
 #footer-info {
   background-color: #964BEB;
   text-align: center;
+  height: 88px;
+}
+#footer-info .socials img{
+  height: 40px;
+  width: auto;
+  margin: 10px;
+  margin-bottom: 6px;
 }

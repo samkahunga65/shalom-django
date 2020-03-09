@@ -10,7 +10,8 @@
     {%block css%}
     {%endblock%}
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    
+    {% block style %}
+    {%endblock%}
 <title>Shalom</title>
 </head>
 <body>
@@ -60,15 +61,15 @@
       <div class="line"></div>
     </div>
     <ul class="nav-links">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="/order">menu</a></li>
+      <li><a href="whatsapp:contact=+254722972616@s.whatsapp.com&message='I'd like to chat with you'">Contact</a></li>
       {% if user.is_authenticated %}
       <li><a href="/a/logout">logout</a></li>
       <li><a href="/m">management</a></li>
       {% else %}
       <!-- <li><a href="a/login">login</a></li>
       <li><a href="a/signup">signup</a></li> -->
-      <li><a href="a/aio">aio</a></li>
+      <li><a href="a/aio">signup</a></li>
       
       {% endif %}
     </ul>
@@ -79,11 +80,16 @@
     {%block content%}
     {%endblock%}
     <footer>
-        <div class="footer-start">
-          <h3>temani business centre.next to coop bank.mathigu rd.ruiru ndani</h3>
-          <p></p>
-        </div>
-        <p id="footer-info">©shalom best foods 2020</p>
+        
+        <div id="footer-info">
+          <div class="socials">
+            <a href="mailto: shalombestfoods@gmail.com"><img src="{% static 'menu/img/gmail.svg' %}" alt="">
+            <a href="whatsapp:contact=+254722972616@s.whatsapp.com&message='I'd like to chat with you'"><img src="{% static 'menu/img/whatsapp.svg' %}" alt=""></a>
+            <a href="http://www.facebook.com"><img src="{% static 'menu/img/facebook.svg' %}" alt=""></a>
+            <a href="https://goo.gl/maps/UVxbZoEbZoRrR25e9"><img src="{% static 'menu/img/maps-and-flags.svg' %}" alt=""></a>
+          </div>
+        <p>©shalom best foods 2020</p>
+      </div>
     </footer>
     
 </body>

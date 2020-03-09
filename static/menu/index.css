@@ -41,12 +41,13 @@ body {
       font-size: 1rem;
       margin-top: 1rem; }
     .jumbotron .content button {
-      width: 20%;
-      height: 1.5rem;
-      margin: 2rem 40%;
+      width: 30%;
+      height: 2rem;
+      margin: 2rem 35%;
       border: 0px;
       border-radius: 4px;
-      background-color: #964BEB; }
+      color: white;
+      background-color: #6E37AB; }
     .jumbotron .content button a {
       text-align: center;
       margin: auto;

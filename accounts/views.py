@@ -43,6 +43,7 @@ def logout_view(request):
 def all_in_one_view(request):
     x =1
     if request.method == 'POST':
+            rr = 1
             form = RegistrationForm(request.POST)
             form2 = AuthenticationForm(data=request.POST)
             if form.is_valid():
